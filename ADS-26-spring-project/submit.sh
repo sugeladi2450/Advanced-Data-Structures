@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 在项目根目录创建 <学号>_project_phase2/ 并复制五个 .py。截图与 zip 见 phase2.md「提交要求」。
+# 在项目根目录创建 <学号>_project_phase2/ 并复制五个 .py。截图与 zip 见 phase2.md“提交要求”。
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -44,4 +44,4 @@ for f in "${FILES[@]}"; do
 done
 
 echo "已创建: $OUT"
-echo "请将 test_phase2.py 的 Speed Comparison 截图放入该文件夹，并压缩为 zip 后上传到 canvas"
+echo "请将 test_phase2.py 的 Speed Comparison 截图放入该文件夹，并压缩成 zip 后上传到 canvas"
