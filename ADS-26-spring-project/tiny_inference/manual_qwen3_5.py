@@ -22,20 +22,15 @@ def qwen3_5_text_forward(
 
     inputs_embeds = text_model.embed_tokens(input_ids)
 
-    # ===== TODO: KV Cache 初始化 - 创建缓存对象与 cache_position (START) =====
-    # 实现提示：首次进入时，创建缓存对象，供后续传递
-    # cache_position作用：记录当前batch每个 token 在完整序列中的绝对位置索引，后续用于 RoPE（位置编码）和 create_causal_mask（构建正确的因果掩码）
-    # 生成cache_position：从已缓存序列长度开始，依次递增，直到当前batch的最后一个token
-    # 使用torch.arange生成，形状为(seq_len,)的1D张量
-    past_seen_tokens = 0 # 已缓存序列长度，目前默认为0，实现后被覆盖
+    if use_cache and past_key_values is None:
+        past_key_values = Qwen3_5DynamicCache(config=text_model.config)
 
-    cache_position = torch.arange( # 如果past_seen_tokens为0，则始终全量重算
+    past_seen_tokens = past_key_values.get_seq_length() if past_key_values is not None else 0
+    cache_position = torch.arange(
         past_seen_tokens,
         past_seen_tokens + inputs_embeds.shape[1],
         device=inputs_embeds.device,
     )
-
-    # ===== TODO: KV Cache - 创建缓存对象与 cache_position (END) =====
 
     position_ids = cache_position.view(1, 1, -1).expand(4, inputs_embeds.shape[0], -1)
     text_position_ids = position_ids[0]
@@ -45,9 +40,9 @@ def qwen3_5_text_forward(
         config=text_model.config,
         inputs_embeds=inputs_embeds,
         attention_mask=attention_mask,
-        cache_position=cache_position, # phase1中传入None，phase2中实现功能
-        past_key_values=past_key_values, # phase1中默认传入None，phase2中实现功能
-        position_ids=text_position_ids, # phase1中传入None，phase2中实现功能
+        cache_position=cache_position,
+        past_key_values=past_key_values,
+        position_ids=text_position_ids,
     )
     linear_attn_mask = text_model._update_linear_attn_mask(attention_mask, cache_position)
 
@@ -66,7 +61,6 @@ def qwen3_5_text_forward(
         hidden_states = decoder_layer.input_layernorm(hidden_states)
 
         if decoder_layer.layer_type == "linear_attention":
-            # 对比 phase1，多将缓存对象、当前位置、层索引传入，函数内部根据缓存状态决定走 prefill 还是 decode 路径
             hidden_states = qwen3_5_linear_attn_forward(
                 decoder_layer.linear_attn,
                 hidden_states=hidden_states,
@@ -76,7 +70,6 @@ def qwen3_5_text_forward(
                 layer_idx=layer_idx,
             )
         else:
-            # 对比 phase1，多将缓存对象和层索引传入，函数内部会将本步 K/V 追加到缓存并使用完整历史 K/V 计算注意力
             hidden_states, _ = qwen3_5_attention_forward(
                 decoder_layer.self_attn,
                 hidden_states=hidden_states,
