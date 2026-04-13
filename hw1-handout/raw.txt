@@ -1,0 +1,50 @@
+element#=50
+(element#=50, p=0.500000) average query distance = 10.086900
+(element#=50, p=0.500000) max_level = 6, average_height = 1.860000
+(element#=50, p=0.367879) average query distance = 8.605100
+(element#=50, p=0.367879) max_level = 4, average_height = 1.460000
+(element#=50, p=0.250000) average query distance = 9.367600
+(element#=50, p=0.250000) max_level = 3, average_height = 1.280000
+(element#=50, p=0.125000) average query distance = 13.117200
+(element#=50, p=0.125000) max_level = 2, average_height = 1.120000
+
+element#=100
+(element#=100, p=0.500000) average query distance = 12.952100
+(element#=100, p=0.500000) max_level = 7, average_height = 1.960000
+(element#=100, p=0.367879) average query distance = 11.353400
+(element#=100, p=0.367879) max_level = 5, average_height = 1.540000
+(element#=100, p=0.250000) average query distance = 12.714100
+(element#=100, p=0.250000) max_level = 4, average_height = 1.320000
+(element#=100, p=0.125000) average query distance = 18.032300
+(element#=100, p=0.125000) max_level = 3, average_height = 1.140000
+
+element#=200
+(element#=200, p=0.500000) average query distance = 12.338500
+(element#=200, p=0.500000) max_level = 8, average_height = 2.095000
+(element#=200, p=0.367879) average query distance = 11.436400
+(element#=200, p=0.367879) max_level = 6, average_height = 1.655000
+(element#=200, p=0.250000) average query distance = 11.060000
+(element#=200, p=0.250000) max_level = 4, average_height = 1.375000
+(element#=200, p=0.125000) average query distance = 17.281100
+(element#=200, p=0.125000) max_level = 3, average_height = 1.165000
+
+element#=500
+(element#=500, p=0.500000) average query distance = 17.392000
+(element#=500, p=0.500000) max_level = 10, average_height = 2.018000
+(element#=500, p=0.367879) average query distance = 16.286600
+(element#=500, p=0.367879) max_level = 7, average_height = 1.574000
+(element#=500, p=0.250000) average query distance = 15.893000
+(element#=500, p=0.250000) max_level = 5, average_height = 1.332000
+(element#=500, p=0.125000) average query distance = 20.450200
+(element#=500, p=0.125000) max_level = 4, average_height = 1.146000
+
+element#=1000
+(element#=1000, p=0.500000) average query distance = 17.424800
+(element#=1000, p=0.500000) max_level = 10, average_height = 2.002000
+(element#=1000, p=0.367879) average query distance = 16.528000
+(element#=1000, p=0.367879) max_level = 7, average_height = 1.569000
+(element#=1000, p=0.250000) average query distance = 16.611100
+(element#=1000, p=0.250000) max_level = 5, average_height = 1.336000
+(element#=1000, p=0.125000) average query distance = 22.257100
+(element#=1000, p=0.125000) max_level = 4, average_height = 1.138000
+
