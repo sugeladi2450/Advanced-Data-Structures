@@ -1,0 +1,278 @@
+{
+  "packages": [
+    "0ad",
+    "0ad-data-common",
+    "0xffff",
+    "2048",
+    "2048-qt",
+    "2ping",
+    "2vcard",
+    "389-ds",
+    "389-ds-base",
+    "389-ds-base-dev"
+  ],
+  "dependencies": {
+    "0ad": {
+      "layer1": [
+        "0ad-data",
+        "0ad-data-common",
+        "libboost-filesystem1.74.0",
+        "libc6",
+        "libcurl3-gnutls",
+        "libenet7",
+        "libfmt9",
+        "libfreetype6",
+        "libgcc-s1",
+        "libgloox18",
+        "libicu72",
+        "libminiupnpc17",
+        "libopenal1",
+        "libpng16-16",
+        "libsdl2-2.0-0",
+        "libsodium23",
+        "libstdc++6",
+        "libvorbisfile3",
+        "libwxbase3.2-1",
+        "libwxgtk-gl3.2-1",
+        "libwxgtk3.2-1",
+        "libx11-6",
+        "libxml2",
+        "zlib1g"
+      ],
+      "layer2": [
+        "fonts-dejavu-core",
+        "ttf-dejavu-core",
+        "fonts-freefont-ttf",
+        "ttf-freefont",
+        "fonts-texgyre",
+        "tex-gyre"
+      ],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "0ad-data-common": {
+      "layer1": [
+        "fonts-dejavu-core",
+        "ttf-dejavu-core",
+        "fonts-freefont-ttf",
+        "ttf-freefont",
+        "fonts-texgyre",
+        "tex-gyre"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "0xffff": {
+      "layer1": [
+        "libc6",
+        "libusb-0.1-4"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "2048": {
+      "layer1": [
+        "libc6"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "2048-qt": {
+      "layer1": [
+        "libc6",
+        "libgcc1",
+        "libqt5core5a",
+        "libqt5qml5",
+        "libqt5widgets5",
+        "libstdc++6",
+        "qml-module-qtquick-controls",
+        "qml-module-qtquick-dialogs"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "2ping": {
+      "layer1": [
+        "python3",
+        "python3-pkg-resources",
+        "lsb-base"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "2vcard": {
+      "layer1": [
+        "perl"
+      ],
+      "layer2": [],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "389-ds": {
+      "layer1": [
+        "389-ds-base",
+        "cockpit-389-ds"
+      ],
+      "layer2": [
+        "389-ds-base-libs",
+        "adduser",
+        "acl",
+        "ldap-utils",
+        "libmozilla-ldap-perl",
+        "libnetaddr-ip-perl",
+        "libsocket-getaddrinfo-perl",
+        "libsasl2-modules-gssapi-mit",
+        "perl",
+        "python3-lib389",
+        "python3-selinux",
+        "python3-semanage",
+        "python3-sepolicy",
+        "systemd",
+        "libc6",
+        "libcrypt1",
+        "libdb5.3",
+        "libgcc-s1",
+        "libicu72",
+        "libldap-2.5-0",
+        "liblmdb0",
+        "libnspr4",
+        "libnss3",
+        "libpam0g",
+        "libsasl2-2",
+        "libsnmp40",
+        "libssl3",
+        "libsystemd0",
+        "python3",
+        "cockpit",
+        "libjs-bootstrap",
+        "libjs-c3",
+        "libjs-d3",
+        "libjs-jquery-datatables",
+        "libjs-jquery-datatables-extensions",
+        "libjs-jquery-jstree",
+        "libjs-moment",
+        "libnss3-tools"
+      ],
+      "layer3": [
+        "passwd",
+        "libcom-err2",
+        "libcrack2",
+        "libjson-c5",
+        "libkrb5-3",
+        "libpcre2-8-0",
+        "zlib1g",
+        "libjemalloc2",
+        "libacl1",
+        "python3-argcomplete",
+        "python3-argparse-manpage",
+        "python3-dateutil",
+        "python3-distro",
+        "python3-ldap",
+        "python3-pkg-resources",
+        "python3-pyasn1",
+        "python3-pyasn1-modules",
+        "openssl",
+        "python3-packaging",
+        "python3-pytest"
+      ],
+      "layer4": [],
+      "layer5": []
+    },
+    "389-ds-base": {
+      "layer1": [
+        "389-ds-base-libs",
+        "adduser",
+        "acl",
+        "ldap-utils",
+        "libmozilla-ldap-perl",
+        "libnetaddr-ip-perl",
+        "libsocket-getaddrinfo-perl",
+        "libsasl2-modules-gssapi-mit",
+        "perl",
+        "python3-lib389",
+        "python3-selinux",
+        "python3-semanage",
+        "python3-sepolicy",
+        "systemd",
+        "libc6",
+        "libcrypt1",
+        "libdb5.3",
+        "libgcc-s1",
+        "libicu72",
+        "libldap-2.5-0",
+        "liblmdb0",
+        "libnspr4",
+        "libnss3",
+        "libpam0g",
+        "libsasl2-2",
+        "libsnmp40",
+        "libssl3",
+        "libsystemd0",
+        "python3"
+      ],
+      "layer2": [
+        "passwd",
+        "libcom-err2",
+        "libcrack2",
+        "libjson-c5",
+        "libkrb5-3",
+        "libpcre2-8-0",
+        "zlib1g",
+        "libjemalloc2",
+        "libacl1",
+        "python3-argcomplete",
+        "python3-argparse-manpage",
+        "python3-dateutil",
+        "python3-distro",
+        "python3-ldap",
+        "python3-pkg-resources",
+        "python3-pyasn1",
+        "python3-pyasn1-modules",
+        "libnss3-tools",
+        "openssl",
+        "python3-packaging",
+        "python3-pytest"
+      ],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    },
+    "389-ds-base-dev": {
+      "layer1": [
+        "389-ds-base-libs",
+        "libldap2-dev",
+        "libnspr4-dev"
+      ],
+      "layer2": [
+        "libc6",
+        "libcom-err2",
+        "libcrack2",
+        "libgcc-s1",
+        "libjson-c5",
+        "libkrb5-3",
+        "libldap-2.5-0",
+        "libnspr4",
+        "libnss3",
+        "libpcre2-8-0",
+        "libssl3",
+        "zlib1g",
+        "libjemalloc2"
+      ],
+      "layer3": [],
+      "layer4": [],
+      "layer5": []
+    }
+  }
+}
