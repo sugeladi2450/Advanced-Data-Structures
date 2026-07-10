@@ -1,0 +1,11 @@
+[project]
+name = "ads-26-spring-lab0"
+version = "0.1.0"
+description = "Lab0 of ADS 2026 Spring"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=2.26.0",
+    "pytest>=9.0.2",
+    "requests>=2.32.5",
+]
